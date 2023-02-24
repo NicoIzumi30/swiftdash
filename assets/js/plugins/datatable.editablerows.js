@@ -33,9 +33,9 @@ class EditableRows {
     this._staticHeight = 62;
 
     this._createInstance();
-    this._addListeners();
+    // this._addListeners();
     this._extend();
-    this._initBootstrapModal();
+    // this._initBootstrapModal();
   }
 
   // Creating datatable instance
@@ -61,29 +61,6 @@ class EditableRows {
       drawCallback: function (settings) {
         _this._setInlineHeight();
       },
-      columnDefs: [
-        // Adding Name content as an anchor with a target #
-        {
-          targets: 0,
-          render: function (data, type, row, meta) {
-            return '<a class="list-item-heading body" href="#">' + data + '</a>';
-          },
-        },
-        // Adding Tag content as a span with a badge class
-        {
-          targets: 4,
-          render: function (data, type, row, meta) {
-            return '<span class="badge bg-outline-primary">' + data + '</span>';
-          },
-        },
-        // Adding checkbox for Check column
-        {
-          targets: 5,
-          render: function (data, type, row, meta) {
-            return '<div class="form-check float-end mt-1"><input type="checkbox" class="form-check-input"></div>';
-          },
-        },
-      ],
     });
     _this._setInlineHeight();
   }
@@ -107,7 +84,7 @@ class EditableRows {
     document.querySelectorAll('.tag-sale').forEach((el) => el.addEventListener('click', () => this._updateTag('Sale')));
 
     // Calling clear form when modal is closed
-    document.getElementById('addEditModal').addEventListener('hidden.bs.modal', this._clearModalForm);
+    // document.getElementById('addEditModal').addEventListener('hidden.bs.modal', this._clearModalForm);
   }
 
   // Extending with DatatableExtend to get search, select and export working
@@ -123,9 +100,9 @@ class EditableRows {
   }
 
   // Keeping a reference to add/edit modal
-  _initBootstrapModal() {
-    this._addEditModal = new bootstrap.Modal(document.getElementById('addEditModal'));
-  }
+  // _initBootstrapModal() {
+  //   this._addEditModal = new bootstrap.Modal(document.getElementById('addEditModal'));
+  // }
 
   // Setting static height to datatable to prevent pagination movement when list is not full
   _setInlineHeight() {
@@ -192,12 +169,12 @@ class EditableRows {
   }
 
   // Showing modal for an objective, add or edit
-  _showModal(objective, title, button) {
-    this._addEditModal.show();
-    this._currentState = objective;
-    document.getElementById('modalTitle').innerHTML = title;
-    document.getElementById('addEditConfirmButton').innerHTML = button;
-  }
+  // _showModal(objective, title, button) {
+  //   // this._addEditModal.show();
+  //   this._currentState = objective;
+  //   document.getElementById('modalTitle').innerHTML = title;
+  //   document.getElementById('addEditConfirmButton').innerHTML = button;
+  // }
 
   // Filling the modal form data
   _setForm() {

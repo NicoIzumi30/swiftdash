@@ -287,7 +287,7 @@
 </div>
 
 <!-- Vendor Scripts Start -->
-<script src="<?= base_url() ?>assets/js/vendor/jquery-3.5.1.min.js"></script>
+<script src="<?= base_url() ?>assets/js/jquery-3.6.0.min.js"></script>
 <script src="<?= base_url() ?>assets/js/vendor/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url() ?>assets/js/vendor/OverlayScrollbars.min.js"></script>
 <script src="<?= base_url() ?>assets/js/vendor/autoComplete.min.js"></script>
@@ -301,7 +301,12 @@
 <script src="<?= base_url() ?>assets/js/vendor/intro.min.js"></script>
 <script src="<?= base_url() ?>assets/js/vendor/select2.full.min.js"></script>
 <script src="<?= base_url() ?>assets/js/vendor/plyr.min.js"></script>
-<!-- Vendor Scripts End -->
+<script src="<?= base_url() ?>assets/js/vendor/bootstrap-submenu.js"></script>
+<script src="<?= base_url() ?>assets/js/vendor/datatables.min.js"></script>
+<script src="<?= base_url() ?>assets/js/vendor/mousetrap.min.js"></script>
+<script src="<?= base_url() ?>assets/js/sweetalert2.all.min.js"></script>
+<script src="<?= base_url() ?>assets/js/inifile.js"></script>
+
 
 <!-- Template Base Scripts Start -->
 <script src="<?= base_url() ?>assets/font/CS-Line/csicons.min.js"></script>
@@ -313,6 +318,8 @@
 <script src="<?= base_url() ?>assets/js/base/init.js"></script>
 <!-- Template Base Scripts End -->
 <!-- Page Specific Scripts Start -->
+<script src="<?= base_url() ?>assets/js/cs/datatable.extend.js"></script>
+<script src="<?= base_url() ?>assets/js/plugins/datatable.editablerows.js"></script>
 <script src="<?= base_url() ?>assets/js/cs/glide.custom.js"></script>
 <script src="<?= base_url() ?>assets/js/cs/charts.extend.js"></script>
 <script src="<?= base_url() ?>assets/js/pages/dashboard.default.js"></script>

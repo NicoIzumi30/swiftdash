@@ -59,9 +59,9 @@ class DatatableExtend {
     }
 
     // Click listeners for rows to make them selected or show the edit modal
-    if (this.element) {
-      this.element.querySelectorAll('tbody').forEach((el) => el.addEventListener('click', this._onRowClick.bind(this)));
-    }
+    // if (this.element) {
+    //   this.element.querySelectorAll('tbody').forEach((el) => el.addEventListener('click', this._onRowClick.bind(this)));
+    // }
 
     // Search listeners
     document.querySelectorAll('.datatable-search').forEach((el) => {
@@ -111,25 +111,25 @@ class DatatableExtend {
     }
   }
 
-  _onRowClick(event) {
-    event.preventDefault();
-    if (!this.datatable.data().any()) {
-      // Only no data warning row available at this point
-      return;
-    }
-    const currentTarget = event.target.closest('tr');
-    if (event.target.tagName === 'A') {
-      // Title clicked. Showing the edit view.
-      this.unCheckAllRows();
-      this.settings.editRowCallback(this.datatable.row(currentTarget));
-      return true;
-    }
-    currentTarget.classList.toggle('selected');
-    const checkbox = currentTarget.querySelector('.form-check input');
-    checkbox.checked = !checkbox.checked;
-    checkbox.dispatchEvent(new Event('change'));
-    this.controlCheckAll();
-  }
+  // _onRowClick(event) {
+  //   event.preventDefault();
+  //   if (!this.datatable.data().any()) {
+  //     // Only no data warning row available at this point
+  //     return;
+  //   }
+  //   const currentTarget = event.target.closest('tr');
+  //   if (event.target.tagName === 'A') {
+  //     // Title clicked. Showing the edit view.
+  //     this.unCheckAllRows();
+  //     this.settings.editRowCallback(this.datatable.row(currentTarget));
+  //     return true;
+  //   }
+  //   currentTarget.classList.toggle('selected');
+  //   const checkbox = currentTarget.querySelector('.form-check input');
+  //   checkbox.checked = !checkbox.checked;
+  //   checkbox.dispatchEvent(new Event('change'));
+  //   this.controlCheckAll();
+  // }
 
   _onCheckAllChange(event) {
     const isCheckedAll = document.getElementById('datatableCheckAll').checked;

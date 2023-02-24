@@ -62,29 +62,6 @@ class RowsAjax {
       drawCallback: function (settings) {
         _this._setInlineHeight();
       },
-      columnDefs: [
-        // Adding Name content as an anchor with a target #
-        {
-          targets: 0,
-          render: function (data, type, row, meta) {
-            return '<a class="list-item-heading body" href="#">' + data + '</a>';
-          },
-        },
-        // Adding Tag content as a span with a badge class
-        {
-          targets: 4,
-          render: function (data, type, row, meta) {
-            return '<span class="badge bg-outline-primary">' + data + '</span>';
-          },
-        },
-        // Adding checkbox for Check column
-        {
-          targets: 5,
-          render: function (data, type, row, meta) {
-            return '<div class="form-check float-end mt-1"><input type="checkbox" class="form-check-input"></div>';
-          },
-        },
-      ],
     });
   }
 
